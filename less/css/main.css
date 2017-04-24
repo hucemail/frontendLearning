@@ -1,0 +1,9 @@
+body {
+  background-color: red;
+}
+/*设置宽度和高度为200px*/
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
