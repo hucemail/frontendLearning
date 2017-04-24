@@ -1,9 +1,18 @@
-body {
-  background-color: red;
+.list {
+  width: 600px;
+  margin: 0 auto;
+  /*编译后生成 .list_t*/
 }
-/*设置宽度和高度为200px*/
-#box {
-  width: 200px;
-  height: 200px;
-  background-color: green;
+.list li {
+  line-height: 20px;
+  list-style: none;
+}
+.list a {
+  text-decoration: none;
+}
+.list a:hover {
+  color: red;
+}
+.list_t {
+  color: yellow;
 }

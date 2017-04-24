@@ -1,11 +1,18 @@
-//定义测试宽度变量为200px
-@test_width:200px;
-body{
-  background-color: red;
-}
-/*设置宽度和高度为200px*/
-#box{
-  width:@test_width;
-  height: @test_width;
-  background-color: green;
+.list{
+  width: 600px;
+  margin: 0 auto;
+  li{
+    line-height: 20px;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    &:hover{
+      color: red;
+    }
+  }
+  /*编译后生成 .list_t*/
+  &_t{
+    color: yellow;
+  }
 }
