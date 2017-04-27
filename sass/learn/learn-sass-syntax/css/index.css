@@ -1,0 +1,17 @@
+/* line 2, ../sass/index.scss */
+#arc {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: red;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -moz-box-shadow: 0px 0px 10px 5px green;
+  -webkit-box-shadow: 0px 0px 10px 5px green;
+  box-shadow: 0px 0px 10px 5px green;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+  *zoom: 1;
+}
