@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope) {
+            $scope.price = 50.3;
+        }).filter("chinese_currency", function () {
+            return function (value)
+            {
+                return "￥" + value.toFixed(2);
+            }
+        }).filter("plus_currency", function () {
+            return function (value, para) {
+                return "￥" + (value + para).toFixed(2);
+            }
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <p>使用currency:<mark>{{price|currency}}</mark></p>
+    <p>使用chinese currency：<mark>{{price|chinese_currency}}</mark></p>
+    <p>使用plus currency:<mark>{{price|plus_currency:10}}</mark></p>
+</body>
+</html>

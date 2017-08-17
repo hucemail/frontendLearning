@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope) {
+            $scope.arr = [1, 2, 3];
+            $scope.age = 0;
+            $scope.lj = function (v) {
+                $scope.age = $scope.age + v;
+            }
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <input type="text" ng-model="age" disabled />
+    <ul>
+        <li ng-repeat="(k,v) in arr">
+            <button ng-click="lj(v)">&nbsp;&nbsp;加{{v}}&nbsp;&nbsp;</button>
+        </li>
+    </ul>
+</body>
+</html>

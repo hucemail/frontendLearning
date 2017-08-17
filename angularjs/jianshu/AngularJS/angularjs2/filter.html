@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("App", []).controller("MainCtrl", function ($scope) {
+            $scope.books = [
+                { name: "Java编程思想", price: 120.6, publicationTime: 1495420103773 },
+                { name: "CLR via C#", price: 99.9, publicationTime: 1445520603773 },
+                { name: "深入理解C#", price: 60, publicationTime: 1295520153773 },
+                { name: "s设计模式", price: 50, publicationTime: 1465520603773 },
+                { name: "重构之改善原有代码的质量", price: 35, publicationTime: 1495528135773 }
+            ];
+        });
+    </script>
+</head>
+<body ng-controller="MainCtrl">
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>书籍名称</th>
+                <th>价格</th>
+                <th>出版时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(index,book) in books ">
+                <td>{{index}}</td>
+                <td>{{book.name}}</td>
+                <td>{{book.price|currency }}</td>
+                <td>{{book.publicationTime|date:"yyyy-MM-dd HH:mm:ss"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

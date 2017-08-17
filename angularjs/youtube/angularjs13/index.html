@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="index.js"></script>
+    <script src="filters.js"></script>
+</head>
+<body>
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>菜单名称</th>
+                    <th>状态</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="menu in menus">
+                    <td>{{menu.name }}</td>
+                    <td ng-bind-html="menu.status|status"></td>
+                    <td ng-bind-html="menu.url|url"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs1", "angularjs1\", "{7EF23015-EF14-4232-AE65-A37EEB780E2B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_16562"
+		Debug.AspNetCompiler.PhysicalPath = "angularjs1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16562\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_16562"
+		Release.AspNetCompiler.PhysicalPath = "angularjs1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16562\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "16562"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs2", "angularjs2\", "{1D07293E-D5A9-43AD-8527-405947F128B1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3639"
+		Debug.AspNetCompiler.PhysicalPath = "angularjs2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3639\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3639"
+		Release.AspNetCompiler.PhysicalPath = "angularjs2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3639\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3639"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs4", "angularjs4\", "{7DDFC103-BAAC-4772-9EE4-0B81A0215A18}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_27895"
+		Debug.AspNetCompiler.PhysicalPath = "angularjs4\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27895\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_27895"
+		Release.AspNetCompiler.PhysicalPath = "angularjs4\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27895\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "27895"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs3(1)", "angularjs3\", "{BFE17909-A6CD-4569-A202-98596EE28F09}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_27961"
+		Debug.AspNetCompiler.PhysicalPath = "angularjs3\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27961\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_27961"
+		Release.AspNetCompiler.PhysicalPath = "angularjs3\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27961\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "27961"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs5", "angularjs5\", "{5558FC87-98E1-41FA-B6AC-6F53E4A0BD29}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_34060"
+		Debug.AspNetCompiler.PhysicalPath = "angularjs5\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_34060\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_34060"
+		Release.AspNetCompiler.PhysicalPath = "angularjs5\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_34060\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "34060"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs6", "angularjs6\", "{A079ED1E-C8A2-49DB-91F0-1CD2E4C57569}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3996"
+		Debug.AspNetCompiler.PhysicalPath = "angularjs6\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3996\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3996"
+		Release.AspNetCompiler.PhysicalPath = "angularjs6\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3996\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3996"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF23015-EF14-4232-AE65-A37EEB780E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF23015-EF14-4232-AE65-A37EEB780E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D07293E-D5A9-43AD-8527-405947F128B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D07293E-D5A9-43AD-8527-405947F128B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDFC103-BAAC-4772-9EE4-0B81A0215A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDFC103-BAAC-4772-9EE4-0B81A0215A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE17909-A6CD-4569-A202-98596EE28F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE17909-A6CD-4569-A202-98596EE28F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5558FC87-98E1-41FA-B6AC-6F53E4A0BD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5558FC87-98E1-41FA-B6AC-6F53E4A0BD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A079ED1E-C8A2-49DB-91F0-1CD2E4C57569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A079ED1E-C8A2-49DB-91F0-1CD2E4C57569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

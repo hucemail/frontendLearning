@@ -1,0 +1,101 @@
+﻿body{background-color:#eeeeee;color:#999;}
+        ul,ol,li,p{
+            margin:0px;
+            padding:0px;
+            list-style:none;
+        }
+        .main-item{
+            width:800px;
+            margin:0 auto;
+            padding:20px;
+            background-color:white;
+        }
+        .steps:after{
+            /*解决浮动后父元素高度不自动撑开的问题*/
+            content:"";
+            clear:both;
+            display:block;
+        }
+        .steps li{
+            float:left;
+            width:33%;
+            /*宽度包含padding*/
+            box-sizing:border-box;
+            padding:10px 30px;
+            border-bottom:solid 3px #999;
+            text-align:center;
+        }
+        .steps li strong{
+            background-color:#999;
+            display:inline-block;
+            padding:3px 10px;
+            border-radius:100%;
+            color:white;
+        }
+        .active{
+            color:black !important;
+             border-bottom:solid 3px #ff4700 !important; 
+        }
+        .active strong{
+            background-color:#ff4700 !important;
+             
+        }
+        .content-form{
+            width:350px;
+            margin:70px auto;
+        }
+       .content-form li input{
+            width:100%;
+            box-sizing:border-box;
+            padding:10px;
+            outline:none;
+            border:1px solid #ccc;
+        }
+       .content-form li input:focus{
+           border-color:#00a2ff;
+       }
+        .validate-error{
+           color:red !important;
+       }
+       .validate-error input{
+           border-color:red !important;
+       }
+        button{
+            width:100%;
+            box-sizing:border-box;
+            line-height:40px;
+            background-color:#00a2ff;
+            border:0px;
+            color:white;
+            font-size:16px;
+            border-radius:2px;
+            font-weight:bold;
+            cursor:pointer;
+            margin-bottom:10px;
+        }
+        button:hover{
+            background-color:#0395e8;
+        }
+        button.btn-pre,button.btn-pre:hover{
+            background-color:#bfc2c3;
+        }
+        .tip{
+            padding:10px 10px;
+            font-size:12px;
+        }
+        .sp-line{
+            text-align:center;
+            font-size:14px;
+            line-height:20px;
+        }
+       .sp-line .line{
+            display:inline-block;
+            width:100%;
+            border-top: solid 1px #999;
+        }
+       .sp-line .title{
+           position:relative;
+           top:-15px;
+           background-color:white;
+           padding:0px 10px;
+       }

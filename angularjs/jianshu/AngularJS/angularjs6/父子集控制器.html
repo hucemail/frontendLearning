@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope) {
+            $scope.val = "我是父集";
+            $scope.$on("updateVal", function (event, data) {
+                $scope.val = data;
+            })
+            $scope.updateVal = function () {
+                $scope.val = "这是父集修改后的数据";
+                $scope.$broadcast("updateVal", $scope.val);
+            }
+        }).controller("childCtr", function ($scope) {
+            $scope.val = "这是子集修改后的数据";
+            $scope.$emit("updateVal", $scope.val);
+            $scope.$on("updateVal", function (event, data) {
+                $scope.val = data;
+            })
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <button ng-click="updateVal()">父集修改数据</button>
+    parent:{{val}}
+    <div ng-controller="childCtr">
+        child:{{val}}
+    </div>
+</body>
+</html>

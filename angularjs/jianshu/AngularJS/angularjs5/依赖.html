@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.provider("goods", function () {
+            var v;
+            return {
+                serValue:function(value){
+                    v=value;
+                },
+                $get: function(){
+                    return {
+                        name: "外星人",
+                        price: 19999.99,
+                        number: v
+                    }
+                }
+            }
+           
+        });
+        app.config(function (goodsProvider) {
+            goodsProvider.serValue(10);
+        });
+        app.controller("ctr1", function ($scope, goods) {
+            console.log(goods);
+            goods.number++;
+            alert(JSON.stringify(goods.number)); //11
+        }).controller("ctr2", function ($scope, goods) {
+            goods.number++;
+            alert(JSON.stringify(goods.number)); //12
+        }).controller("ctr3", function ($scope, goods) {
+            goods.number++;
+            alert(JSON.stringify(goods.number)); //13
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="ctr1"></div>
+    <div ng-controller="ctr2"></div>
+    <div ng-controller="ctr3"></div>
+</body>
+</html>

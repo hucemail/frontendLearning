@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <script src="angular.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="myController">
+    <div>
+        <div class="grid-cl" id="grid-cl-1">
+            <h3>第一部分</h3>
+        </div>
+        <div class="grid-content">
+        </div>
+        <div class="grid-cl" id="grid-cl-2">
+            <h3>第二部分</h3>
+        </div>
+        <div class="grid-content">
+        </div>
+        <div class="grid-cl" id="grid-cl-3">
+            <h3>第三部分</h3>
+        </div>
+        <div class="grid-content">
+        </div>
+        <div class="grid-cl" id="grid-cl-4">
+            <h3>第四部分</h3>
+        </div>
+        <div class="grid-content">
+        </div>
+    </div>
+    <div class="right-fixed-common">
+        <a href="javascript:;" ng-click="scrollTo('grid-cl-1')">1</a>
+        <a href="javascript:;" ng-click="scrollTo('grid-cl-2')">2</a>
+        <a href="javascript:;" ng-click="scrollTo('grid-cl-3')">3</a>
+        <a href="javascript:;" ng-click="scrollTo('grid-cl-4')">4</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+    <script>
+        var app = angular.module("app", ["ngRoute"]);
+        app.config(function ($routeProvider, $locationProvider) {
+            $routeProvider
+                .when("/junshi", {
+                    template: "<ul><li>junshi1</li><li>junshi2</li><li>junshi3</li></ul>"
+                })
+                .when("/youxi", {
+                    template: "<ul><li>youxi1</li><li>youxi2</li><li>youxi3</li></ul>"
+                })
+                .when("/tiyu", {
+                    template: "<ul><li>tiyu1</li><li>tiyu2</li><li>tiyu3</li></ul>"
+                });
+        });
+        app.controller("ctr", function ($scope) {
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#!/junshi">军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#!/youxi">游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#!/tiyu">体育</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <ng-view></ng-view>
+</body>
+</html>

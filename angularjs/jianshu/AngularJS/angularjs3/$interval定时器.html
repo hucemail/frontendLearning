@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope, $interval) {
+            $scope.val = 0;
+            var timer = $interval(function () {
+                if ($scope.val >= 20)
+                    $interval.cancel(timer);
+                else
+                    $scope.val++;
+            }, 500);
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <mark>{{val}}</mark>
+</body>
+</html>

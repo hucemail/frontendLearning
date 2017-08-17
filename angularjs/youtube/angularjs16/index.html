@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <link href="index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="myController">
+    <div class="main-item">
+        <ul class="steps" id="steps">
+            <li class="active">
+                <strong>1</strong>
+                <span>设置用户名</span>
+            </li>
+            <li>
+                <strong>2</strong>
+                <span>填写账号信息</span>
+            </li>
+            <li>
+                <strong>3</strong>
+                <span>注册成功</span>
+            </li>
+        </ul>
+        <div class="content" ng-include="step">
+        </div>
+    </div>
+</body>
+</html>

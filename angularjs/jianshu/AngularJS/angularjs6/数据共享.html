@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.provider("person", function () {
+            return {
+                $get: function () {
+                    return { name: "name" };
+                }
+            }
+        });
+        app.controller("ctr", function ($scope, person) {
+            $scope.person = person;
+            $scope.updatePerson = function () {
+                $scope.person.name = "ctr修改数据";
+            }
+        });
+        app.controller("ctr1", function ($scope, person) {
+            $scope.person = person;
+            $scope.updatePerson = function () {
+                $scope.person.name = "ctr1修改数据";
+            }
+        });
+        app.controller("ctr2", function ($scope, person) {
+            $scope.person = person;
+            $scope.updatePerson = function () {
+                $scope.person.name = "ctr2修改数据";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="ctr">
+        ctr:{{person.name}}
+        <button ng-click="updatePerson()">ctr修改数据</button>
+    </div>
+    <div ng-controller="ctr1">
+        ctr1:{{person.name}}
+        <button ng-click="updatePerson()">ctr1修改数据</button>
+    </div>
+    <div ng-controller="ctr2">
+        ctr2:{{person.name}}
+        <button ng-click="updatePerson()">ctr2修改数据</button>
+    </div>
+</body>
+</html>

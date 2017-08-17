@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("App", []).controller("MainCtrl", function ($scope) {
+            $scope.image = "https://www.baidu.com/img/bd_logo1.png";
+        });
+    </script>
+</head>
+<body ng-controller="MainCtrl">
+    <a ng-href="{{image}}">baidu</a>
+    <img  ng-src="{{image}}"/>
+</body>
+</html>

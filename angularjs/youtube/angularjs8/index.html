@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        angular.module("myApp", []).controller("myController", function ($scope) {
+            $scope.employees = [
+                   {
+                       name: "Ben", dateOfBirth: new Date("1980/11/23 13:12:33"),
+                       gender: "Male", salary: 55000.788
+                   },
+                   {
+                       name: "Sara", dateOfBirth: new Date("1920/6/23 13:12:33"),
+                       gender: "Female", salary: 68000
+                   },
+                   {
+                       name: "Mark", dateOfBirth: new Date("1960/3/23 13:12:33"),
+                       gender: "Male", salary: 57000
+                   },
+                   {
+                       name: "Pam", dateOfBirth: new Date("October 27, 1979"),
+                       gender: "Female", salary: 53000
+                   },
+                   {
+                       name: "Todd", dateOfBirth: new Date("December 30, 1983"),
+                       gender: "Male", salary: 60000
+                   }
+            ];
+            $scope.rowCount = 3;
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="myController">
+        Rows to display: <input type="number" step="1" min="0" max="5" ng-model="rowCount" />
+        <br />
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>DateOfBirth</th>
+                    <th>Gender</th>
+                    <th>Salary(Number)</th>
+                    <th>Salary(Currency)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | limitTo:rowCount">
+                    <td>{{employee.name | uppercase}}</td>
+                    <td>{{employee.dateOfBirth |date:"yyyy-MM-dd HH:mm:ss" }}</td>
+                    <td>{{employee.gender | lowercase}}</td>
+                    <td>{{employee.salary | number:2}}</td>
+                    <td>{{employee.salary | currency:"￥":1}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

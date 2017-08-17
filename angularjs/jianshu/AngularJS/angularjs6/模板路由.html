@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+    <script>
+        var app = angular.module("app", ["ngRoute"]);
+        app.config(function ($routeProvider, $locationProvider) {
+            $routeProvider
+                .when("/junshi", {
+                    templateUrl: "view/junshi.html",
+                    controller:"junshi"
+                })
+                .when("/youxi", {
+                    templateUrl: "view/youxi.html"
+                })
+                .when("/tiyu", {
+                    templateUrl: "view/tiyu.html"
+                });
+        });
+        app.controller("ctr", function ($scope) {
+            $scope.$on("$routeChangeStart", function () {
+                alert("换页开始");
+            });
+            $scope.$on("$routeChangeSuccess", function () {
+                alert("换页结束");
+            });
+            $scope.$on("$routeChangeError", function () {
+                alert("换页错误");
+            });
+        });
+        app.controller("junshi", function ($scope) {
+            $scope.list = ["军事新闻1", "军事新闻2", "军事新闻3"]
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#!/junshi">军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#!/youxi">游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#!/tiyu">体育</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <ng-view></ng-view>
+</body>
+</html>

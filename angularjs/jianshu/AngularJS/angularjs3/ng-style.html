@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope) {
+            $scope.cls = { "width": "150px", "height": "150px", "background-color": "skyblue", "border": "10px solid #00ff21" };
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <div ng-style="cls"></div>
+</body>
+</html>

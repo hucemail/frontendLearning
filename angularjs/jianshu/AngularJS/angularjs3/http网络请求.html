@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope, $http) {
+            $scope.wd = "";
+            $scope.s = [];
+            var url = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su";
+            $scope.$watch("wd", function () {
+                $http.jsonp(url, {
+                    params: {
+                        wd: $scope.wd,
+                        cb: "jQuery110203276616771330372_1496315749419"
+                    }
+                }).then(function (res) {
+                    console.log(res);
+                }, function (res) {
+                    console.log(res);
+                });
+            }, true);
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <input type="text" ng-model="wd" />
+    <ul>
+        <li ng-repeat="(k,v) in s">{{v}}</li>
+    </ul>
+</body>
+</html>

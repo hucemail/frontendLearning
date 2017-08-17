@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []).controller("myController", function ($scope,$http) {
+            var result = document.getElementById("result");
+            $scope.GetOrders = function () {
+                $http({
+                    url: "http://localhost:32041/api/order/GetOrders",
+                    method: "GET",
+                    params: { "pageindex":2 }
+                }).then(function (response) {
+                    result.innerText = JSON.stringify(response.data);
+                });
+            }
+            $scope.UpdateStatus = function () {
+                $http({
+                    url: "http://localhost:32041/api/order/UpdateStatus",
+                    method: "POST",
+                    data: { "orderNo": "52382017192005", "status": "2" },
+                    headers: { "Signature": "12123" }
+                }).then(function (response) {
+                    result.innerText = JSON.stringify(response.data);
+                });
+            }
+        });
+    </script>
+</head>
+<body ng-controller="myController">
+    <button style="height:33px; padding:5px;" ng-click="GetOrders()">GetOrders提交（get）</button>
+    <button style="height:33px; padding:5px;" ng-click="UpdateStatus()">UpdateStatus提交(post)</button>
+    <p id="result"></p>
+</body>
+</html>

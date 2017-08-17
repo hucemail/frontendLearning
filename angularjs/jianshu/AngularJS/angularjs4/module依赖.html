@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        angular.module("app", ["app1", "app2"]).controller("ctr", function ($scope) {
+            $scope.str = "ctr";
+        });
+        angular.module("app1", []).controller("ctr", function ($scope) {
+            $scope.str = "ctr1";
+        });
+        angular.module("app2", []).controller("ctr", function ($scope) {
+            $scope.str = "ctr2";
+        });
+    </script>
+</head>
+<body ng-app="app">
+    <p ng-controller="ctr">{{str}}</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        angular.module("myApp", []).controller("myController", function ($scope) {
+            $scope.country = {
+                name: "China",
+                capital: "BeiJing",
+                flag: "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=996843c85fafa40f3c93c6db9b542f77/bd3eb13533fa828b4c866919f81f4134960a5aa7.jpg"
+            }
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="myController">
+        <div>Name:{{country.name}}</div>
+        <div>Capital:{{country.capital}}</div>
+        <div>
+            <img ng-src="{{country.flag}}" alt="{{country.name+'Flag'}}" />
+        </div>
+    </div>
+</body>
+</html>

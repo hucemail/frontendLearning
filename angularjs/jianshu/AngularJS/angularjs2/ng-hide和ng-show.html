@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("App", []).controller("MainCtrl", function ($scope) {
+            $scope.ishide = false;
+        });
+    </script>
+</head>
+<body ng-controller="MainCtrl">
+    <button ng-click="ishide=!ishide">显示/隐藏</button>
+    <br />
+    <div style="background-color:#0094ff;width:300px;height:300px;" ng-hide="ishide">
+
+    </div>
+</body>
+</html>

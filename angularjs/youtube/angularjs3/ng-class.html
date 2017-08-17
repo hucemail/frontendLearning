@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope) {
+            $scope.cls = ["dd", "border"];
+        });
+    </script>
+    <style>
+        .d{width:150px;height:150px;background-color:red;}
+        .dd{width:150px;height:150px;background-color:skyblue;}
+        .border{border:10px solid #00ff21;}
+    </style>
+</head>
+<body ng-controller="ctr">
+    <div ng-class="cls"></div>
+</body>
+</html>

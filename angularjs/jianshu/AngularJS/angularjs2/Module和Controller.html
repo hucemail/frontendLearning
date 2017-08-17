@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+	        var app = angular.module("App", []).controller("MainCtrl", function ($scope) {
+	            $scope.alert=function()
+	            {
+	                alert($scope.str);
+	            }
+	        });
+    </script>
+</head>
+<body ng-controller="MainCtrl">
+    <input type="text" ng-model="str" />
+    <br />
+    <button ng-click="alert()">Clike Me</button>
+</body>
+</html>

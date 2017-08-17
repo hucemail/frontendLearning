@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: solid 1px red;
+            line-height: 300px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp",[]).controller("myController", function ($scope) {
+
+        });
+    </script>
+</head>
+<body ng-controller="myController">
+    <input type="checkbox" ng-model="hide" />Hide Div1
+    <input type="checkbox" ng-model="show" />Show Div2
+    <div ng-hide="hide">
+        这是DIV1
+    </div>
+    <div ng-show="show">
+        这是DIV2
+    </div>
+</body>
+</html>

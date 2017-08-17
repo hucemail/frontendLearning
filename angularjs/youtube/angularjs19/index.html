@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="index.js"></script>
+    <script src="stringService.js"></script>
+</head>
+<body ng-controller="myController">
+    输入字符串：<input type="text" placeholder="输入你的字符串" ng-model="input" /><br />
+    输出的字符串:<input type="text" ng-disabled="true" ng-model="output" /><br />
+    <button ng-click="processString(input)">开始转换</button>
+</body>
+</html>

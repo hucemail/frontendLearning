@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <style>
+        table{border-collapse:collapse;}
+        th,td{border:1px solid black;padding:10px;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        angular.module("myApp", []).controller("myController", function ($scope) {
+            $scope.technologies = [
+                { name: "C#", likes: 0, dislikes: 0 },
+                { name: "ASP.NET", likes: 0, dislikes: 0 },
+                { name: "SQL Server", likes: 0, dislikes: 0 },
+                { name: "AngularJS", likes: 0, dislikes: 0 }
+            ];
+            $scope.incrementLikes = function (technology) {
+                technology.likes++;
+            };
+            $scope.incrementDislikes = function (technology) {
+                technology.dislikes++;
+            };
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Likes/Dislikes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies">
+                    <td>{{technology.name}}</td>
+                    <td>{{technology.likes}}</td>
+                    <td>{{technology.dislikes}}</td>
+                    <td>
+                        <button ng-click="incrementLikes(technology);">Likes</button>
+                        <button ng-click="incrementDislikes(technology);">Dislikes</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []).controller("ctr", function ($scope) {
+
+        }).directive("mydirective", function () {
+            return {
+                restrict:"EACM",
+                template: "<mark>Hello</mark>",
+                transclude: true,
+                replace:true
+            };
+        });
+    </script>
+</head>
+<body ng-controller="ctr">
+    <!--E-->
+    <mydirective>Element：</mydirective>
+    <hr />
+    <!--A-->
+    <p mydirective>Attribute:</p>
+    <hr />
+    <!--C-->
+    <p class="mydirective">Class:</p>
+    <hr />
+    <!--M-->
+    <!-- directive:mydirective -->
+    <hr />
+</body>
+</html>
